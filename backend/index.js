@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
     res.send("Hello World 123");
 });
 
-app.get("/api/auth", authRoutes);
+app.use("/api/auth", authRoutes);
 
 app.listen(PORT, () => {
     connectDB();
